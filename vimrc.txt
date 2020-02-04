@@ -1,0 +1,70 @@
+set number
+
+"these 4 lines control how tab indentation works
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=2
+" when indenting with '>', use 4 spaces width
+set shiftwidth=2
+" On pressing tab, insert 4 spaces
+set expandtab
+
+"cofiguring prettier to format on save
+"autocmd FileType javascript set formatprg=prettier\ --stdin
+"autocmd BufWritePre *.js :normal gggqG
+
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/plugged')
+
+" Declare the list of plugins.
+
+"Themes
+Plug 'junegunn/seoul256.vim'
+Plug 'mhartington/oceanic-next'
+Plug 'altercation/vim-colors-solarized'
+
+" Status/tabline for vim
+Plug 'vim-airline/vim-airline'
+
+" Tree explorer
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" Shows Git diff in the gutter
+Plug 'airblade/vim-gitgutter'
+
+" Git wrapper
+Plug 'tpope/vim-fugitive'
+" Sensible default? 
+Plug 'tpope/vim-sensible'
+" Parenthizing made easy
+Plug 'tpope/vim-surround'
+
+Plug 'jiangmiao/auto-pairs'
+
+" Commenting powers
+Plug 'tpope/vim-commentary'
+
+" Javscript
+Plug 'othree/yajs.vim'
+Plug 'dense-analysis/ale'
+
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+"if (has("termguicolors"))
+"  set termguicolors
+"endif
+
+"syntax enable
+" if has('gui_running')
+"     set background=light
+" else
+"     set background=dark
+" endif
+" set background=light
+set background=light
+colorscheme solarized
+
+
